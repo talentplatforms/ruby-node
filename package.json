@@ -1,0 +1,30 @@
+{
+  "name": "git-hooks",
+  "version": "1.0.0",
+  "description": "git hooks and node-based tools",
+  "author": "Andy Ruck",
+  "license": "MIT License",
+  "keywords": [
+    "git-hooks",
+    "rails",
+    "api",
+    "conventional",
+    "commits"
+  ],
+  "scripts": {
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "standard-version": "^7.1.0",
+    "husky": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
