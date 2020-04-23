@@ -39,7 +39,7 @@ VCS_URL=https://github.com/talentplatforms/ruby-node
 _BUILD_DATE=$(shell echo $$(date -u +'%Y-%m-%dT%H:%M:%SZ'))
 _VCS_REF=$(shell echo $$(git rev-parse --verify HEAD))
 _IMAGE_LATEST=${REGISTRY}:latest
-_IMAGE_TAGGED=${REGISTRY}:${NODE_VERSION}-alpine${ALPINE_VERSION}
+_IMAGE_TAGGED=${REGISTRY}:ruby-${RUBY_VERSION}-node-${NODE_VERSION}-slim-${DEBIAN_VERSION_NAME}
 
 # builds the image and tags it with the latest tag and the more specific tag defined in _IMAGE_TAGGED
 build:
