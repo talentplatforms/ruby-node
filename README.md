@@ -43,7 +43,7 @@ Per convention the working directory is set to **/app**
 The image comes with a Makefile that has everything abstracted away for you to easily customize it.
 
 ```bash
-$ make make NODE_VERSION=13.10.1 ALPINE_VERSION=3.11 build push
+$ make make NODE_VERSION=13.10.1 DEBIAN_VERSION_NAME=buster build push
 ```
 
 ## Available VARS
